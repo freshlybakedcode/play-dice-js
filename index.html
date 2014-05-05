@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Play Dice</title>
+  
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />  
+  <script src="js/jquery-1.4.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+
+<body>
+  <div role="main">
+  	<div id="header">
+  		<div class="headerBanner gradient">
+  			
+  		<div class="dropDownWrap">
+	  		<div class="dropDown">
+		  		<p>Play Dice by James Brenton</p>
+		  		<p>www.jamesbrenton.co.uk</p>
+		  		<p>Written in HTML/CSS/JavaScript/jQuery</p>
+	  		</div>
+	  			<p class="slideButton"></p>
+  		</div>	  			
+  		
+  		<div class="headerText">
+  			<h1>Play Dice.</h1>
+  		</div>
+  	</div>
+  </div>
+  
+  	<div id="gameWrap">
+  		<div id="resultWrap">
+		 	<div class="result">
+				<div class="leftTop"></div>
+				<div class="leftBottom"></div>
+				<div class="rectangle">
+			  		<div class="resultLabel bigLabel">
+			  			<p>Win/Lose/Draw</p>
+			  		</div>
+			  	</div>
+			  	<div class="rightTop"></div>
+			  	<div class="rightBottom"></div>
+			</div>
+		</div>
+		
+  		<div id="leftColumn" class="fancyBorder">
+		 <div class="responsiveLeft">
+			<div class="label">Current balance:</div>
+			<div id="currentBalanceLabel" class="label numberLabel">Current balance displayed here</div>
+			<div class="label">Current bet:</div>
+			<div id="currentBetLabel" class="label numberLabel">Current bet displayed here</div>	
+		 </div>
+		 <div class="responsiveRight">
+			<div class="betArea">
+				<div id="increaseBet" class="button">+</div>
+				<div id="decreaseBet" class="button">-</div>
+			</div>
+	
+			<div id="playLabel" class="label bigLabel button">PLAY!</div>  
+		  	<div id="doneLabel" class="label bigLabel button">DONE!</div> 
+		 </div>
+	  	</div>
+	  
+	  	<div id="mainColumn">
+		  <div class="mainWrap fancyBorder">
+			<div class="label">Player Dice:</div>
+			<div class="diePlaceholder">
+		  		<div id="pDie0"></div>
+		  		<div id="rollLabel0" class="rollLabel button">Re-roll</div>
+		  	</div>
+		    <div class="diePlaceholder">
+		  		<div id="pDie1"></div>  
+		  		<div id="rollLabel1" class="rollLabel button">Re-roll</div>
+		    </div>
+		    <div class="diePlaceholder">
+		  		<div id="pDie2"></div> 
+		  		<div id="rollLabel2" class="rollLabel button">Re-roll</div> 
+		    </div>
+		    <div class="diePlaceholder">
+		  		<div id="pDie3"></div> 
+		  		<div id="rollLabel3" class="rollLabel button">Re-roll</div> 
+		    </div>
+		    <div class="diePlaceholder">
+		  		<div id="pDie4"></div>
+		  		<div id="rollLabel4" class="rollLabel button">Re-roll</div>
+		    </div>  
+		    <div class="scoreLabel">
+		    	<div class="label">~ Player Score ~</div>
+		    	<div id="playerScore" class="label numberLabel"></div>
+		    </div>
+		  	
+		    <div class="label">Computer Dice:</div>
+		    <div class="diePlaceholder short">
+		  		<div id="cDie0"></div>
+		    </div>
+		    <div class="diePlaceholder short">
+		  		<div id="cDie1"></div>
+		    </div>
+		    <div class="diePlaceholder short">
+		  		<div id="cDie2"></div>
+		  	</div>
+		    <div class="diePlaceholder short">
+		  		<div id="cDie3"></div>
+		    </div>
+		    <div class="diePlaceholder short">
+		  		<div id="cDie4"></div>
+		  	</div>
+		  	<div class="scoreLabel">
+		  		<div class="label">~ Computer Score ~</div>
+		  		<div id="computerScore" class="label numberLabel"></div>
+		  	</div>	
+		 </div>
+  	</div>
+  </div>
+</div>
+</body>
+<!--   This applies the filter to IE9 so the gradients work -->
+  <!--[if gte IE 9]>		
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+  <script src="js/jquery-1.4.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/script.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Righteous|Fugaz+One|Raleway:100|Press+Start+2P|Seaweed+Script' rel='stylesheet' type='text/css'> </body>
+</html>

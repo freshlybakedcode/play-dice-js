@@ -1,0 +1,28 @@
+/* Makey responsive */
+@media only screen and (max-width:920px) {
+	
+}
+
+@media only screen and (max-width:200px) {
+	
+	#mainColumn {
+		width:96% !important;
+		clear: both;
+		margin:0% 2%;
+		}
+	#leftColumn {
+		width:96% !important;
+		margin:0% 2%;
+	}	
+	.responsiveLeft,
+	#currentBalanceLabel,
+	#currentBetLabel
+	{
+		float:left;
+		clear:none !important;
+	}
+	.responsiveRight {
+		float:right;
+	}
+	
+}

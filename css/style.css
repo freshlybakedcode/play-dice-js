@@ -1,0 +1,422 @@
+@import url('responsive.css');
+
+* {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+
+}
+body {
+	font-family: Arial;
+	background-color: #1a82f7; 
+	background-image: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#2F2727), to(#1a82f7));
+	background-image: -webkit-radial-gradient(center center, #2F2727, #1a82f7); 
+	background-image:   -moz-radial-gradient(50% 50% , ellipse closest-side, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 100%);
+	background-image:     -ms-radial-gradient(center center, #2F2727, #1a82f7);
+	background-image:      -o-radial-gradient(center center, #2F2727, #1a82f7);
+	margin: 0 auto;
+	
+}
+
+/* Typography */
+h1 {
+/* 	font-family: 'Righteous', cursive; */
+	font-family: 'Fugaz One', cursive;
+/* 	font-family: 'Raleway', cursive; */
+/* 	font-family: 'Press Start 2P', cursive; */
+/* font-family: 'Seaweed Script', cursive; */
+	font-size: 3em;
+	margin: 0px;
+	color:#222;
+	text-shadow: 0px 2px 3px #555;
+}
+
+/* Define the global classes */
+.label {
+	clear:both;
+	font-family: 'Fugaz One', cursive;
+}
+.bigLabel {
+	text-align: center;
+	font-size:27px;
+	font-family: 'Press Start 2P', cursive;	
+}
+.numberLabel {
+	background: #a1a1a1;
+	color:white;
+	display: inline;
+	padding:0px 5px;
+	height: 35px;
+	font-size: 24px;
+	margin:auto;
+}
+
+.button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#f0f0f0 0%,
+		#b8b8b8 25%,
+		#6b6b6b 75%,
+		#424242);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#f0f0f0),
+		color-stop(0.25, #b8b8b8),
+		color-stop(0.75, #6b6b6b),
+		to(#424242));
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border: 3px solid #171717;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(087,087,087,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(087,087,087,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+.fancyBorder {	
+	border: 6px solid rgba(0,0,0, 0.3);
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	padding:10px;
+}
+
+
+/* Header section */
+#header {
+	margin-bottom: 15px;
+}
+
+.headerBanner{
+background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 50%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(50%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); /* IE10+ */
+background: linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+}
+
+.headerText {
+/* 	background:#474747; */
+	text-align: center;
+	position: relative;
+	margin-left:35%;
+	margin-right: 35%;
+}
+
+.dropDownWrap {
+	position: absolute;
+	width:200px;
+	margin-left:10px;
+	z-index: 100;
+}
+.dropDown {
+	background: white;
+	height: 200px;
+	padding:10px;
+	display: none;
+}
+	.dropDown p {
+		font-family: 'Raleway', cursive;
+		margin-top: 0px;
+
+	}
+.aboutText {
+	margin: 0;
+	padding: 0;
+	border-top: solid 4px #422410;
+}
+.slideButton {
+	width:0px;
+	height:0px;
+	border-left:25px solid transparent;
+	border-right:25px solid transparent;
+	border-top:25px solid red;
+	line-height:0px;
+	cursor: pointer;
+	margin:0px 0% 0px 34%;
+}
+
+
+/* Main area definitions */
+#gameWrap {
+	max-width:910px;
+	overflow: auto;
+	margin: 0 auto;
+}
+#leftColumn {
+	float:left;
+	width: 25%;
+	margin-right:5%;
+	text-align: center;
+	height:290px;
+}
+#mainColumn {
+	display: inline-block;
+	width:70%;
+}
+
+
+/* The banner for winning/losing/drawing */
+#resultWrap {
+	position:absolute;
+	top:15%;
+	left:28%;
+	height:100px;
+	z-index: 100;
+	display: none;
+}
+.result {
+	width:300px;
+	margin-left:45px;
+	position: relative;
+}
+.rectangle {
+   background: gray;
+   height: 62px;
+   position: relative;
+   -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  	box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  	
+   -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+	border-radius: 2px;
+	
+   z-index: 500; /* the stack order: foreground */
+   margin: 3em 0;
+}
+	.win .rectangle {
+		background: green;
+	}
+	.lose .rectangle {
+		background: red;
+	}
+	.rectangle .resultLabel {
+		position:absolute;
+		width:100%;
+	}
+	.rectangle p {
+		color:white;
+		margin:18px 0px 0px 0px;
+		
+	}
+
+.leftTop {
+   border-color: gray transparent transparent;
+   border-style:solid;
+   border-width:50px;
+   height:0px;
+   width:0px;
+   position: relative;
+   float: left;
+   top: 1px;
+   left: -50px;
+}
+	.win .leftTop {
+		border-color: green transparent transparent;
+	}
+	.lose .leftTop {
+		border-color: red transparent transparent;
+	}
+
+.leftBottom {
+   border-color: transparent transparent gray;
+   border-style:solid;
+   border-width:50px;
+   height:0px;
+   width:0px;
+   position: relative;
+   float: left;
+   top: -40px;
+   left: -150px;
+}
+	.win .leftBottom {
+		   border-color: transparent transparent green;
+	}
+	.lose .leftBottom {
+		   border-color: transparent transparent red;
+	}
+
+.rightTop {
+   border-color: gray transparent transparent;
+   border-style:solid;
+   border-width:50px;
+   height:0px;
+   width:0px;
+   position: relative;
+   float: right;
+   right: -45px;
+   top: -107px;
+}
+	.win .rightTop {
+		border-color: green transparent transparent;
+	}
+	.lose .rightTop {
+		border-color: red transparent transparent;
+	}
+
+.rightBottom {
+   border-color: transparent transparent gray;
+   border-style:solid;
+   border-width:50px;
+   height:0px;
+   width:0px;
+   position: relative;
+   float: right;
+   top: -149px;
+   right: -145px;
+}
+	.win .rightBottom {
+		border-color: transparent transparent green;
+	}
+	.lose .rightBottom {
+		border-color: transparent transparent red;
+	}
+
+
+/* Left column */
+.betArea {
+	margin-top:10px;
+}
+#playLabel, #doneLabel {
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 10px;
+	width:100%;	
+	padding:10px 0px;
+}
+
+#doneLabel,
+#playAgain {
+	display: none;
+}
+
+#increaseBet,
+#decreaseBet
+{
+	font-size: 40px;
+	text-align: center;
+	cursor: pointer;
+	width:70px;
+	height:70px;
+	border:solid 2px black;
+	display:inline-block;
+}
+#increaseBet {
+	margin-right: 20px;
+}
+
+/* Main area */
+
+.mainWrap {
+	width:100%;
+}
+
+/* The dice */
+.diePlaceholder {
+	display: inline-block;
+	margin-right: 15px;
+	height:125px;
+	vertical-align: top;
+}
+.diePlaceholder.short {
+	height:85px;
+}
+.die {
+	border-top: 1px solid #f1f1f1;
+	width: 70px; height: 70px;
+	border-radius: 10px;
+	position: relative;
+	font-size: 6px;
+	display: inline-block;
+	box-shadow: 1px 1px 1px #CCC, 
+				0 1px 2px #444, 
+				0 4px 5px #999;
+	background-image: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#fefefe), to(#f1f1f1));
+	background-image: -webkit-radial-gradient(top, #fefefe, #f1f1f1); 
+	background-image:    -moz-radial-gradient(top, #fefefe, #f1f1f1);
+	background-image:     -ms-radial-gradient(top, #fefefe, #f1f1f1);
+	background-image:      -o-radial-gradient(top, #fefefe, #f1f1f1);	
+}
+.die:after {
+    content: "";
+	width: 20%; 
+	height: 20%; 
+	left: 50%; 
+	top: 50%;
+	margin: -10%;
+	background: #222;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+}
+
+/* Set the die faces */
+.die.dieFace1:after { 
+	box-shadow: 0 .2em 0 #FFF 
+}
+.die.dieFace2:after { 
+	background: transparent;
+	
+	box-shadow: -3em -3em 0 #222, 
+		     	3em  3em 0 #222
+}
+.die.dieFace3:after { 
+	box-shadow: -3em -3em 0 #222, 
+		     	3em  3em 0 #222 
+}
+.die.dieFace4:after { 
+	background: transparent;
+    box-shadow: -3em -3em 0 #222, 
+    	     	3em -3em 0 #222, 
+    	     	-3em 3em 0 #222, 
+    	     	3em 3em 0 #222
+}
+.die.dieFace5:after { 
+	box-shadow: -3em -3em 0 #222, 
+		     	3em  3em 0 #222, 
+		     	-3em  3em 0 #222, 
+		     	3em -3em 0 #222 
+}
+.die.dieFace6:after {
+	background: transparent;
+	box-shadow: -3em -3em 0 #222,
+		   		-3em 0 0 #222,
+		   		-3em 3em 0 #222,
+		   		3em -3em 0 #222,
+		   		3em 0 0 #222,
+		   		3em 3em 0 #222
+}
+/* Label for the scores */
+.scoreLabel {
+	display:inline-block;
+	text-align: center;
+	width:153px;
+}
+/* Set up the re-roll buttons */
+.rollLabel {
+	text-align:center;
+	display:none;
+	cursor:pointer;
+	margin-top:10px;
+}
+.rollLabel:hover {
+	color:red;
+}
+.rollLabel.button {
+	padding:5px 10px;
+	border: 1px solid #171717;
+	font-size: 12px;
+}
+
