@@ -1,5 +1,5 @@
 /*
-Magical dice gambling script lovingly coded by James Brenton
+Play Dice! by James Brenton
 www.jamesbrenton.co.uk
 @sternJobname
 */
@@ -22,7 +22,7 @@ function rollDice() {
 	     computerDice[i] = Math.floor( 1 + Math.random() * 6 );
 	}
 
-};
+}
 
 //When we need to re-roll, we find out which button the user has clicked on by looking at the rollLabel ID. This is then passed to the function as currentDie.
 function reRollDice(currentDie) {
@@ -30,12 +30,12 @@ function reRollDice(currentDie) {
 	     $("#pDie"+currentDie).removeClass();	//Remove the class (and image)...
 	     $("#pDie"+currentDie).addClass("die dieFace"+playerDice[currentDie]); //...and add the new class
 	     $("#rollLabel"+currentDie).css('display','none');	//Hide the button now - only one re-roll allowed
-};
+}
 function reRollComputerDice(currentDie) {
 	     computerDice[currentDie] = Math.floor( 1 + Math.random() * 6 );
 	     $("#cDie"+currentDie).removeClass();
 	     $("#cDie"+currentDie).addClass("die dieFace"+computerDice[currentDie]);
-};
+}
 
 //This adds the appropriate class for the die faces
 function outputClasses(){
@@ -43,13 +43,13 @@ function outputClasses(){
 		$("#pDie"+[i]).removeClass().addClass("die dieFace"+playerDice[i]);
 		$("#cDie"+[i]).removeClass().addClass("die dieFace"+computerDice[i]); 
 		}
-};
+}
 
 //Replace the text in the currentBetLabel with the currentBet
 function updateBet(){
 	$('#currentBetLabel').text(currentBet);
 	$('#currentBalanceLabel').text(currentBalance);
-};
+}
 
 //Update the scores
 function updateScores(){
@@ -61,7 +61,7 @@ function updateScores(){
 	}
 	$("#playerScore").text(playerScore);
 	$("#computerScore").text(computerScore);
-};
+}
 
 //When the player clicks 'Play', we'll hide and reveal some of the page elements.
 function gameMode() {
@@ -70,7 +70,7 @@ function gameMode() {
 	for (i=0; i<5; i++) {
 		$('#rollLabel'+[i]).css('display','block');
 	}
-};
+}
 
 //Enter computer play mode
 function computerPlay(){
